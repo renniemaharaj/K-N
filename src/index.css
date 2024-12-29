@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hrtm-width: auto;
+  --hrtm-theme-background: #fff;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --hrtm-theme-background: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hrtm-theme-background: #111110;
+  }
+}
+
+.hrtm-theme-background {
+  background-color: var(--hrtm-theme-background);
+}
+
+/* The blurring transparent div */
+.blurred-div {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* width: 300px; */
+  /* height: 200px; */
+  /* background: rgba(17, 17, 17, 0.5); Semi-transparent white */
+  backdrop-filter: blur(20px); /* Blurs the content behind */
+  -webkit-backdrop-filter: blur(20px); /* For Safari support */
+  border-radius: 12px; /* Optional, for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for aesthetics */
+}
+
+/* The blurring transparent div */
+.blurred-div-light {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* width: 300px; */
+  /* height: 200px; */
+  /* background: rgba(17, 17, 17, 0.5); Semi-transparent white */
+  backdrop-filter: blur(2px); /* Blurs the content behind */
+  -webkit-backdrop-filter: blur(20px); /* For Safari support */
+  border-radius: 12px; /* Optional, for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for aesthetics */
+}

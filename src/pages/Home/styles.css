@@ -1,0 +1,6 @@
+.k-n-bg-art {
+  background-image: url("/assets/K&N.png");
+  background-size: cover; /* Ensures the background image covers the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
