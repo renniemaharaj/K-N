@@ -5,12 +5,10 @@ import HeroSection from "./components/Hero";
 import ServicesSection from "./components/Services";
 import FeaturesSection from "./components/Feature";
 import Footer from "./components/Footer";
-import { Button, Dialog, Flex, Separator } from "@radix-ui/themes";
+import { Dialog, Flex, Separator } from "@radix-ui/themes";
 import FormA from "../Signup/Form";
 import { formValidationSchema } from "./schema";
 import { formFields, formStepMetas } from "./fields";
-import { XIcon } from "lucide-react";
-import Hint from "../../components/Hint";
 
 import "./styles.css";
 const Index: React.FC = () => {
