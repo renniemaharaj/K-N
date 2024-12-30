@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const handleMenuToggle = () => setMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <nav className="p-4 shadow fixed w-full z-10 blurred-div rounded-none">
+    <nav className="p-4 shadow fixed w-full z-10 blurred-div !rounded-none">
       {/* Desktop & Mobile Navigation Container */}
       <Flex align="center" justify="between" className="max-w-7xl mx-auto">
         {/* Logo */}

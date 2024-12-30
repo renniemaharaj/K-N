@@ -103,7 +103,7 @@
   /* height: 200px; */
   /* background: rgba(17, 17, 17, 0.5); Semi-transparent white */
   backdrop-filter: blur(2px); /* Blurs the content behind */
-  -webkit-backdrop-filter: blur(20px); /* For Safari support */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   border-radius: 12px; /* Optional, for rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for aesthetics */
 }

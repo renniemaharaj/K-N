@@ -31,7 +31,7 @@ const Footer: React.FC = () => (
         </Link> */}
       </Text>
     </Flex>
-    <Flex className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 w-full !items-center !justify-center p-1">
+    <Flex className="max-w-7xl !flex-wrap mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 w-full !items-center !justify-center p-1">
       {/* Second Column: Support Section */}
       <div className="hidden md:block">
         <Heading size="4" className="text-md font-bold mb-4">
@@ -69,6 +69,7 @@ const Footer: React.FC = () => (
         </Text>
         <Flex className="gap-2">
           <TextField.Root
+            disabled
             size="2"
             placeholder="Enter your email"
             className="text-black"

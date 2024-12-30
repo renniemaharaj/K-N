@@ -20,14 +20,19 @@ const Index: React.FC = () => {
       className={`${quoteOpen ? "!block" : "!hidden"} !transition-all w-[100vw] h-[100vh] !fixed top-0 left-0 z-50 blurred-div-light`}
     >
       <Dialog.Root open={quoteOpen} onOpenChange={setQuoteOpen}>
-        <Dialog.Content maxWidth="450px" className="!p-1">
-          <Dialog.Title className="!text-center !text-2xl !font-bold !mb-4">
+        <Dialog.Content
+          maxWidth="450px"
+          className="!p-6 !rounded-lg shadow-xl bg-white transition-transform transform-gpu scale-100 animate-fade-in"
+        >
+          <Dialog.Title className="!text-center !text-2xl font-extrabold text-gray-800 !mb-4">
             K&N Quote Request Form
           </Dialog.Title>
-          <Dialog.Description size="2" mb="4">
-            <Hint>Tailor your quote request</Hint>
+          <Dialog.Description className="!text-gray-600 !text-sm !mb-4">
+            Tailor your quote request
           </Dialog.Description>
-          <Flex className="!flex-col !items-center !justify-center k-n-bg-art">
+          <Flex className="!flex-col !p-5 !items-center !justify-center k-n-bg-art relative overflow-hidden">
+            <div className="absolute w-[200px] h-[200px] bg-blue-500/20 rounded-full -top-10 -left-10 blur-lg" />
+            <div className="absolute w-[300px] h-[300px] bg-pink-500/10 rounded-full -bottom-20 -right-20 blur-xl" />
             <FormA
               schema={formValidationSchema}
               formFields={formFields}
@@ -35,17 +40,17 @@ const Index: React.FC = () => {
               customSubmit="Request Quote"
             />
           </Flex>
-          {/* <Flex
-            gap="3"
-            mt="4"
-            className="max-w-10 !justify-center !items-center"
-          > */}
-          <Dialog.Close className="!absolute !top-0 !right-0 !w-10 !justify-center !items-center">
-            <Button color="gray" className="!w-10">
-              <XIcon />
-            </Button>
-          </Dialog.Close>
-          {/* </Flex> */}
+          {/* <Dialog.Close>
+            <Flex className="w-full p-5 !justify-center !items-center">
+              <Button
+                color="gray"
+                className="!mx-auto hover:bg-gray-100 hover:text-black focus:ring-2 focus:ring-gray-300"
+              >
+                <XIcon className="mr-2" />
+                Cancel
+              </Button>
+            </Flex>
+          </Dialog.Close> */}
         </Dialog.Content>
       </Dialog.Root>
     </Flex>

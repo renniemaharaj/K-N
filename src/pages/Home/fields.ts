@@ -18,7 +18,7 @@ export const initialFormTitle = "Request a free quote";
 // Form states and their display messages, omit any or all to have initialFormTitle used
 export const formStepMetas: FormStepMeta[] = [
   {
-    displayMessage: "You Information",
+    displayMessage: "Your Information",
     state: "You",
   },
   {
