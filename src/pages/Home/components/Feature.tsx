@@ -1,66 +1,9 @@
 import { Card, Flex, Heading, Text } from "@radix-ui/themes";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import { features } from "../configuration";
+import { Carousel } from "./Carousel";
 
 const FeaturesSection = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  let scrollTimeout: ReturnType<typeof setTimeout>;
-
-  // Auto-scroll effect
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-
-    const startAutoScroll = () => {
-      return setInterval(() => {
-        if (carousel.scrollWidth > carousel.clientWidth) {
-          const isEnd =
-            carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth;
-          carousel.scrollTo({
-            left: isEnd ? 0 : carousel.scrollLeft + carousel.clientWidth,
-            behavior: "smooth",
-          });
-        }
-      }, 3000);
-    };
-
-    // Initialize auto-scroll
-    let scrollInterval = startAutoScroll();
-
-    // Handle user scroll to restart the auto-scroll
-    const handleScroll = () => {
-      clearInterval(scrollInterval);
-      clearTimeout(scrollTimeout);
-
-      // Restart auto-scroll after 3 seconds of user inactivity
-      scrollTimeout = setTimeout(() => {
-        scrollInterval = startAutoScroll();
-      }, 3000);
-    };
-
-    // Translate vertical scroll to horizontal scroll
-    const handleWheel = (e: WheelEvent) => {
-      // if (window.innerWidth > 768) return;
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        carousel.scrollBy({
-          left: e.deltaY,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    carousel.addEventListener("scroll", handleScroll);
-    carousel.addEventListener("wheel", handleWheel);
-
-    return () => {
-      clearInterval(scrollInterval);
-      clearTimeout(scrollTimeout);
-      carousel.removeEventListener("scroll", handleScroll);
-      carousel.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
-
   return (
     <section id="about" className="py-16 bg-gray-50 blurred-div">
       <div className="max-w-6xl md:max-w-[800px] mx-auto px-4 blurred-div">
@@ -72,17 +15,21 @@ const FeaturesSection = () => {
           <Text size="4" className="text-gray-600 mt-2 max-w-2xl mx-auto">
             Our friendly & experienced cleaners will leave your home sparkling.
           </Text>
+          <br />
+          <br />
+          <Text size="4" className="text-gray-600 mt-2 mx-auto max-w-[600px]">
+            Our committed staff guarantees that every space is perfectly clean
+            to your highest expectations! Trust us to help you keep your home
+            consistently fresh and clean.
+          </Text>
         </div>
 
         {/* Grid or Carousel Layout */}
-        <Flex
-          ref={carouselRef}
-          className="!w-full p-2 overflow-x-auto snap-x snap-mandatory scrollbar-hide flex-nowrap gap-4"
-        >
-          {features.map((feature, idx) => (
+        <Carousel
+          items={features.map((feature, idx) => (
             <Card
               key={idx}
-              className="!p-4 snap-center rounded-md border flex flex-col items-center min-w-[280px] max-w-[300px] flex-shrink-0"
+              className="!p-4 !snap-center !rounded-md !border !flex !flex-col !items-center !min-w-[280px] !max-w-[300px] !flex-shrink-0"
             >
               {/* Numbered Icon */}
               <div className="flex items-center justify-center w-8 h-8 mb-4 rounded-full bg-blue-500 text-white text-lg font-semibold">
@@ -98,7 +45,8 @@ const FeaturesSection = () => {
               </Text>
             </Card>
           ))}
-        </Flex>
+          variant="no-scrollbar"
+        />
       </div>
     </section>
   );
