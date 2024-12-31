@@ -9,15 +9,26 @@ const ServicesSection: React.FC = () => (
           Services
         </Heading>
         <Flex className="flex-col items-center gap-3">
-          <Text size="4" className="text-gray-600 mt-2 mx-auto max-w-[600px]">
+          {/* <Text size="4" className="text-gray-600 mt-2 mx-auto max-w-[600px]">
             Discover a whole new level of cleanliness and service excellence as
-            the best cleaning services in the Indy, Indiana.
-          </Text>
-          <Text size="4" className="text-gray-600 mt-2 mx-auto max-w-[600px]">
-            Our committed staff guarantees that every space is perfectly clean
-            to your highest expectations! Trust us to help you keep your home
-            consistently fresh and clean.
-          </Text>
+            the best cleaning services.
+          </Text> */}
+          <ul className="list-disc list-inside max-w-[700px]">
+            <li>
+              <Text
+                size="4"
+                className="text-gray-600 mt-2 mx-auto max-w-[600px]"
+              >
+                Providing commercial and residential cleaning services in the
+                the Hamilton, Marion and Hendricks counties of Indiana
+              </Text>
+            </li>
+          </ul>
+
+          <Text
+            size="4"
+            className="text-gray-600 mt-2 mx-auto max-w-[600px]"
+          ></Text>
         </Flex>
       </div>
       <Flex className="my-[50px]" />

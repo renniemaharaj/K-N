@@ -47,12 +47,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setQuoteOpen }) => {
           Providing commercial and residential cleaning services.
         </Text>
         <br />
+        <br />
         <Text className="text-lg mt-4 italic">
-          “Enjoy A meticulously Cleaned Home.”
+          “Enjoy the comfort of knowing your cleaning needs will be met.”
         </Text>
         <Button
           size="3"
-          // variant="outline"
+          variant="outline"
           highContrast
           className="!shadow-lg !m-4 blurred-div !animate-pulse"
           onClick={() => setQuoteOpen(true)}

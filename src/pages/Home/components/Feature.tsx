@@ -12,16 +12,30 @@ const FeaturesSection = () => {
           <Heading size="8" className="font-semibold text-gray-800 m-5">
             Why Choose Us
           </Heading>
-          <Text size="4" className="text-gray-600 mt-2 max-w-2xl mx-auto">
-            Our friendly & experienced cleaners will leave your home sparkling.
-          </Text>
+
           <br />
-          <br />
-          <Text size="4" className="text-gray-600 mt-2 mx-auto max-w-[600px]">
-            Our committed staff guarantees that every space is perfectly clean
-            to your highest expectations! Trust us to help you keep your home
-            consistently fresh and clean.
-          </Text>
+          <ul className="list-disc list-inside !max-w-[700px] !mx-auto">
+            <li>
+              <Text size="4" className="text-gray-600 !mt-4 !mx-auto ">
+                Our friendly & experienced cleaners will leave your home
+                sparkling.
+              </Text>
+            </li>
+            <br />
+            <li>
+              <Text size="4" className="text-gray-600 !mt-4 !mx-auto">
+                Our committed staff guarantees that every space is perfectly
+                clean to your highest expectations!
+              </Text>
+            </li>
+            <br />
+            <li>
+              <Text size="4" className="text-gray-600 mt-4 !mx-auto">
+                Trust us to help you keep your home and office space
+                consistently fresh and clean.
+              </Text>
+            </li>
+          </ul>
         </div>
 
         {/* Grid or Carousel Layout */}

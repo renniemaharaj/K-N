@@ -26,6 +26,11 @@ const services: Service[] = [
     title: "Move In/Out Cleaning",
     description: "Complete cleaning services for your moving needs.",
   },
+  {
+    icon: <Building2 className="h-6 w-6 text-primary" />,
+    title: "Office Cleaning",
+    description: "Professional cleaning services for your office space.",
+  },
 ];
 
 const features: Feature[] = [
