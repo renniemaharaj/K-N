@@ -20,7 +20,7 @@ const ServicesSection: React.FC = () => (
                 className="text-gray-600 mt-2 mx-auto max-w-[600px]"
               >
                 Providing commercial and residential cleaning services in the
-                the Hamilton, Marion and Hendricks counties of Indiana
+                Hamilton, Marion and Hendricks counties of Indiana
               </Text>
             </li>
           </ul>
